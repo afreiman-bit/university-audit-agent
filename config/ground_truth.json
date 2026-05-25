@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "institution": "University of Mississippi",
+    "tenant": "olemiss",
+    "created": "2026-05-25",
+    "evaluator": "manual",
+    "scoring_rubric": {
+      "2": "Present and extractable — explicitly stated on page, not linked or implied",
+      "1": "Partial — incomplete, vague, or only linked to another page",
+      "0": "Absent — nothing on page addresses this question",
+      "unclear_extraction_failure": "Page too thin or navigation-heavy to evaluate",
+      "unclear_content_behind_barrier": "Information likely exists behind login or form",
+      "unclear_ambiguous_reference": "Something relevant present but cannot be scored confidently",
+      "unclear_contradictory_signals": "Conflicting information present"
+    },
+    "questions": [
+      { "id": 1, "label": "What does this program cost, and is financial aid available?" },
+      { "id": 2, "label": "What are my chances of getting a job, and what will I earn?" },
+      { "id": 3, "label": "What do I need to apply, and when is the deadline?" },
+      { "id": 4, "label": "How long will it take and how is it structured?" },
+      { "id": 5, "label": "Is this program respected and accredited?" },
+      { "id": 6, "label": "What is it actually like to be a student here?" },
+      { "id": 7, "label": "Who do I contact if I have a question?" },
+      { "id": 8, "label": "What will I actually learn and what courses will I take?" },
+      { "id": 9, "label": "Who will teach me?" },
+      { "id": 10, "label": "How does this program compare to what I need?" },
+      { "id": 11, "label": "What happens after I apply?" },
+      { "id": 12, "label": "Is this program available in a format that works for my life?" }
+    ]
+  },
+  "pages": [
+    {
+      "id": "gt_001",
+      "url": "https://olemiss.edu/programs/bus/bachelor-business-administration/",
+      "page_title": "B.B.A. in General Business",
+      "school": "business",
+      "department": "general-business",
+      "page_type": "program",
+      "expected_total_score": 11,
+      "expected_severity": "high",
+      "staleness_flag": false,
+      "multi_program_flag": false,
+      "bucket": "middling",
+      "evaluator_notes": "Same template as Accountancy page but significantly less content. Accreditation completely absent — AACSB not mentioned anywhere despite School of Business Administration being AACSB accredited. No named contact at program level. 4-year action plan is genuinely useful content but does not address post-application process.",
+      "scores": [
+        { "question_id": 1, "score": 1, "finding": "Links to Financial Aid and Tuition & Fees pages but no cost figure stated on the page itself.", "evidence": null, "staleness_flag": false },
+        { "question_id": 2, "score": 1, "finding": "Lists career paths (Business Management, Healthcare, Law, Small Business) and links to What Can I Do With This Major but no placement rates or salary data stated.", "evidence": null, "staleness_flag": false },
+        { "question_id": 3, "score": 1, "finding": "Apply Now link present but no application requirements or deadlines stated on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 4, "score": 2, "finding": "120 credit hours and 4 years stated explicitly. Oxford and Online locations stated.", "evidence": "120 Hours", "staleness_flag": false },
+        { "question_id": 5, "score": 0, "finding": "No accreditation information anywhere on the page. AACSB not mentioned despite School of Business Administration holding this accreditation.", "evidence": null, "staleness_flag": false },
+        { "question_id": 6, "score": 2, "finding": "Finley Rock student story with photo, named quote, and specific academic detail (minor in Chemistry, Biology, and Entrepreneurship, Honors College, sorority, biology honors society).", "evidence": "My favorite thing about being a part of the business school is the helpful advisors and professors.", "staleness_flag": false },
+        { "question_id": 7, "score": 0, "finding": "No named contact, no email, no phone specific to this program anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 8, "score": 1, "finding": "High-level curriculum description present. Links to degree plan PDF but no course list on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 9, "score": 0, "finding": "No faculty mentioned anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 10, "score": 1, "finding": "4-year action plan provides useful career exploration framework but no prerequisites or transfer credit information for incoming students.", "evidence": null, "staleness_flag": false },
+        { "question_id": 11, "score": 0, "finding": "Nothing about review timeline, notification dates, or next steps post-application.", "evidence": null, "staleness_flag": false },
+        { "question_id": 12, "score": 2, "finding": "Oxford and Online both explicitly stated in Program Location.", "evidence": "Oxford, Online", "staleness_flag": false }
+      ]
+    },
+    {
+      "id": "gt_002",
+      "url": "https://olemiss.edu/programs/accy/bachelor-accountancy-accountancy/",
+      "page_title": "B.Accy. in Accountancy — Patterson School",
+      "school": "accountancy",
+      "department": "accountancy",
+      "page_type": "program",
+      "expected_total_score": 16,
+      "expected_severity": "improving",
+      "staleness_flag": true,
+      "multi_program_flag": false,
+      "bucket": "better",
+      "evaluator_notes": "Best page in the set for Q2 — actual BLS salary figures with growth projections. Best page for Q7 — named advisors with email and phone for three campuses. Staleness flag on salary data which references 2023 figures. Ranking claim (8th in nation) present but no accreditation body named — AACSB absent despite being critical credential for accounting programs.",
+      "scores": [
+        { "question_id": 1, "score": 1, "finding": "Links to Financial Aid and Tuition & Fees but no cost figure stated on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 2, "score": 2, "finding": "$80k median income for accountants and $100k for financial analysts stated explicitly with BLS source. 6% and 9% projected growth rates stated.", "evidence": "$80k Median income for Accountants and Auditors in 2023.", "staleness_flag": true },
+        { "question_id": 3, "score": 1, "finding": "Apply Now link present but no requirements or deadlines stated.", "evidence": null, "staleness_flag": false },
+        { "question_id": 4, "score": 2, "finding": "120 credit hours, 4 years, Oxford/Tupelo/DeSoto all stated explicitly.", "evidence": "120, 4 years", "staleness_flag": false },
+        { "question_id": 5, "score": 1, "finding": "8th in the nation ranking referenced with link but no accreditation body named. AACSB not mentioned.", "evidence": "8th in the nation", "staleness_flag": false },
+        { "question_id": 6, "score": 2, "finding": "Amyaha Graham testimonial with photo, named quote, and specific credential detail (Class Marshal and Taylor Medalist 2023).", "evidence": "The PSOA has crafted a rigorous accounting curriculum that, combined with the unwavering support of the faculty and staff, has greatly contributed to my success on the CPA exams.", "staleness_flag": false },
+        { "question_id": 7, "score": 2, "finding": "Three named advisors with email and phone across Oxford, DeSoto, and Tupelo campuses. Kaci Farr, Stephanie Marks, Erin Ridout (Oxford), Amanda Carper (DeSoto), Sihya Smith (Tupelo).", "evidence": "Kaci Farr, Academic Counselor, ksfarr@olemiss.edu", "staleness_flag": false },
+        { "question_id": 8, "score": 1, "finding": "Good curriculum description present, links to degree plan PDF, but no course list on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 9, "score": 1, "finding": "Faculty described as top researchers and leaders in accounting education but no named faculty anywhere.", "evidence": "faculty who are top researchers and leaders in accounting education", "staleness_flag": false },
+        { "question_id": 10, "score": 1, "finding": "Change of major information and internship program described but no prerequisites for incoming students from outside the university.", "evidence": null, "staleness_flag": false },
+        { "question_id": 11, "score": 0, "finding": "Nothing about review timeline, notification, or next steps post-application.", "evidence": null, "staleness_flag": false },
+        { "question_id": 12, "score": 2, "finding": "Oxford, Tupelo, and DeSoto all explicitly stated in Program Location.", "evidence": "Oxford, Tupelo, DeSoto", "staleness_flag": false }
+      ]
+    },
+    {
+      "id": "gt_003",
+      "url": "https://olemiss.edu/programs/applsci/bachelor-social-work/",
+      "page_title": "B.S.W. in Social Work",
+      "school": "applied-sciences",
+      "department": "social-work",
+      "page_type": "program",
+      "expected_total_score": 18,
+      "expected_severity": "improving",
+      "staleness_flag": true,
+      "multi_program_flag": false,
+      "bucket": "best",
+      "evaluator_notes": "Best page in the set overall. Q5 is the strongest accreditation disclosure of all five pages — CSWE named explicitly with licensure table, state requirements, and revision date of 2/8/2022. Q8 has actual named courses on page. Q7 has named advisor with photo, email, and phone. Staleness flag on salary data from Indeed 2022 and BLS 2022 — four years old. Salary sourced from Indeed (weaker than BLS used on Accountancy page) which is itself a cross-page coherence finding. Licensure revision date is an explicit staleness signal the agent can catch directly.",
+      "scores": [
+        { "question_id": 1, "score": 1, "finding": "Links to Financial Aid and Tuition & Fees but no cost figure stated on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 2, "score": 1, "finding": "$50k median for Housing Specialists and $60k for Advocacy Managers stated but sourced from Indeed 2022 — significantly stale and from a weaker source than BLS. Job counts present but not salary for core social work roles.", "evidence": "50K Median income for Housing Specialists in 2022.", "staleness_flag": true },
+        { "question_id": 3, "score": 1, "finding": "Two-stage admission process explained (pre-major then full admission). No deadlines stated. Link to more information present.", "evidence": null, "staleness_flag": false },
+        { "question_id": 4, "score": 2, "finding": "120 credit hours, 4 years, Oxford/Tupelo/DeSoto stated. Internship structure detailed — 13-week, 40 hours per week, 480 hours total.", "evidence": "120, 4 Years", "staleness_flag": false },
+        { "question_id": 5, "score": 2, "finding": "CSWE accreditation explicitly named. Licensure requirements explained including Mississippi and state-by-state guidance. Revision date of 2/8/2022 visible in licensure table.", "evidence": "The Bachelors of Social Work program at The University of Mississippi is accredited by the Council on Social Work Education (CSWE).", "staleness_flag": false },
+        { "question_id": 6, "score": 2, "finding": "Two named student ambassadors (Sequoia Burdette, Graham Gustafson) with photos. Internship experience described in genuine detail.", "evidence": null, "staleness_flag": false },
+        { "question_id": 7, "score": 2, "finding": "Claudia McDavis, Academic Advisor Social Work, named with photo, email rcmcdavi@olemiss.edu, and phone (662) 915-7336.", "evidence": "Claudia McDavis, Academic Advisor, Social Work, rcmcdavi@olemiss.edu", "staleness_flag": false },
+        { "question_id": 8, "score": 2, "finding": "Three actual courses listed with names and descriptions on page: SW 321 Human Behavior and the Social Environment I, SW 340 Social Work Research, SW 495 Social Work Internship. Link to full catalog also present.", "evidence": "SW 321: Human Behavior and the Social Environment I", "staleness_flag": false },
+        { "question_id": 9, "score": 0, "finding": "No faculty mentioned anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 10, "score": 2, "finding": "Pre-major requirements explained, GPA requirement of 2.0 stated, internship prerequisites detailed including NASW membership, malpractice insurance, and $50 lab fee.", "evidence": "All other degree requirements, including GPA of 2.0 must be met prior to beginning Internship.", "staleness_flag": false },
+        { "question_id": 11, "score": 1, "finding": "Two-stage admission described — what happens after applying as pre-major is explained including change of major form and advising session. Post-full-admission process not addressed.", "evidence": null, "staleness_flag": false },
+        { "question_id": 12, "score": 2, "finding": "Oxford, Tupelo, and DeSoto all explicitly stated in Program Location.", "evidence": "Oxford, Tupelo, DeSoto", "staleness_flag": false }
+      ]
+    },
+    {
+      "id": "gt_004",
+      "url": "https://olemiss.edu/programs/libarts/bachelor-arts-english/",
+      "page_title": "B.A. in English",
+      "school": "liberal-arts",
+      "department": "english",
+      "page_type": "program",
+      "expected_total_score": 15,
+      "expected_severity": "improving",
+      "staleness_flag": false,
+      "multi_program_flag": true,
+      "bucket": "tricky",
+      "evaluator_notes": "Edge case page. Multi-program flag required — three distinct emphasis areas (Creative Writing, Editing Writing and Publishing, Literature Justice and Society) with different course requirements. Q8 is the hardest scoring call in the set — exhaustive course lists for all three emphases with course numbers and titles. Agent must recognize content-rich non-standard presentation and score 2, not default to 1 because there is no clean summary table. Q9 partial is a subtle call — acclaimed faculty and award-winning creative writers mentioned but no names given. Cross-page coherence note: this page and the BBA page use the same general template but have vastly different content quality — same template, 11 vs 15 score.",
+      "scores": [
+        { "question_id": 1, "score": 1, "finding": "Links to Financial Aid and Tuition & Fees. Scholarships link also present but no cost figure stated on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 2, "score": 1, "finding": "Alumni career list is impressive (HarperCollins, Nickelodeon, Yale, NYT bestselling author) but no salary data anywhere. Career paths implied not stated.", "evidence": null, "staleness_flag": false },
+        { "question_id": 3, "score": 1, "finding": "Apply Now link present but no requirements or deadlines stated.", "evidence": null, "staleness_flag": false },
+        { "question_id": 4, "score": 2, "finding": "120 credit hours, 4 years, three emphasis options, Oxford and three regional campuses (Booneville, DeSoto, Tupelo) all stated.", "evidence": "120, 4 years", "staleness_flag": false },
+        { "question_id": 5, "score": 0, "finding": "No accreditation information, no rankings, nothing about program credentials anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 6, "score": 2, "finding": "Julie Dhossche testimonial with photo and specific credential (B.A. in English and Biochemistry 2011, now Assistant Professor of Dermatology at Oregon Health and Science University). YouTube video also present.", "evidence": "The study of English is multifaceted—you're learning literature, language, culture, art, philosophy and you're honing your skills in speaking and writing.", "staleness_flag": false },
+        { "question_id": 7, "score": 2, "finding": "Annabelle Harris, CLA Coordinator of Student Recruitment, named with email amharri8@olemiss.edu and phone 662-915-7178.", "evidence": "Annabelle Harris, CLA Coordinator of Student Recruitment, amharri8@olemiss.edu", "staleness_flag": false },
+        { "question_id": 8, "score": 2, "finding": "Exhaustive course lists for all three emphasis areas with course numbers and titles. Core requirements also listed. Most curriculum transparency of all five pages. Multi-program flag applies — agent must evaluate across all three emphases.", "evidence": "Eng 299: Intro to Literary Studies", "staleness_flag": false },
+        { "question_id": 9, "score": 1, "finding": "Acclaimed literature faculty and award-winning and bestselling creative writers mentioned but no named faculty anywhere on page.", "evidence": "acclaimed literature faculty as well as award-winning and bestselling creative writers", "staleness_flag": false },
+        { "question_id": 10, "score": 1, "finding": "Minor requirement for B.A. explained, emphasis areas described. No prerequisites for incoming students.", "evidence": null, "staleness_flag": false },
+        { "question_id": 11, "score": 0, "finding": "Nothing about review timeline, notification, or next steps post-application.", "evidence": null, "staleness_flag": false },
+        { "question_id": 12, "score": 2, "finding": "Oxford, Booneville, DeSoto, and Tupelo all explicitly stated in Program Location.", "evidence": "Oxford, Booneville, DeSoto, Tupelo", "staleness_flag": false }
+      ]
+    },
+    {
+      "id": "gt_005",
+      "url": "https://olemiss.edu/programs/school-of-law/air-space-cert/",
+      "page_title": "Air and Space Law Graduate Certificate",
+      "school": "law",
+      "department": "center-air-space-law",
+      "page_type": "certificate",
+      "expected_total_score": 6,
+      "expected_severity": "critical",
+      "staleness_flag": false,
+      "multi_program_flag": false,
+      "bucket": "poor",
+      "evaluator_notes": "Worst page in the set. Degree field in Program Information box is blank — template designed for degree programs cannot represent a certificate program, resulting in empty field rather than N/A or Graduate Certificate. This is a CMS template mismatch, not missing content — the finding routes to IT not the content team. Apply Now button links to LSAC.org external service, not Ole Miss directly — broken user journey. No prerequisites stated despite this being a graduate certificate explicitly targeting legal professionals and policymakers — a prospective student cannot determine if they are eligible. Audience mismatch with all other pages — this is graduate/professional, not undergraduate.",
+      "scores": [
+        { "question_id": 1, "score": 1, "finding": "Explore Tuition section links to Tuition & Fees page but no cost figure stated. No financial aid reference.", "evidence": null, "staleness_flag": false },
+        { "question_id": 2, "score": 0, "finding": "No career outcomes, no salary data, no employer examples anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 3, "score": 1, "finding": "Apply Now link present but links to LSAC.org external service — not Ole Miss application portal. No requirements or deadlines on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 4, "score": 1, "finding": "12 credit hours stated and Oxford/Online listed but no duration in time (semesters or years). No semester breakdown or course sequence.", "evidence": "12", "staleness_flag": false },
+        { "question_id": 5, "score": 0, "finding": "No accreditation, no rankings, no credentials of any kind mentioned on page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 6, "score": 0, "finding": "No student stories, no testimonials, no description of student experience anywhere.", "evidence": null, "staleness_flag": false },
+        { "question_id": 7, "score": 0, "finding": "No named contact, no email, no phone anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 8, "score": 1, "finding": "Topics described in prose including public international law, space security, cybersecurity, aircraft financing. No course numbers or names. Link to curriculum catalog present.", "evidence": null, "staleness_flag": false },
+        { "question_id": 9, "score": 0, "finding": "No faculty mentioned anywhere on the page.", "evidence": null, "staleness_flag": false },
+        { "question_id": 10, "score": 0, "finding": "No prerequisites stated. No indication of whether JD or other qualifications required despite page stating program targets legal professionals and policymakers.", "evidence": null, "staleness_flag": false },
+        { "question_id": 11, "score": 0, "finding": "Nothing about review timeline, notification, or next steps post-application.", "evidence": null, "staleness_flag": false },
+        { "question_id": 12, "score": 2, "finding": "Oxford and Online both explicitly stated in Program Location.", "evidence": "Oxford, Online", "staleness_flag": false }
+      ]
+    }
+  ],
+  "cross_page_notes": [
+    {
+      "type": "source_inconsistency",
+      "pages": ["gt_002", "gt_003"],
+      "finding": "Accountancy page uses BLS as salary data source. Social Work page uses Indeed for some figures and BLS for others. Same institution, different data source standards — cross-page coherence finding."
+    },
+    {
+      "type": "template_mismatch",
+      "pages": ["gt_001", "gt_004"],
+      "finding": "BBA and English pages use the same general template. BBA scores 11/24, English scores 15/24. Same structure, vastly different content investment — institutional content quality differential worth surfacing."
+    },
+    {
+      "type": "universal_gap",
+      "pages": ["gt_001", "gt_002", "gt_003", "gt_004", "gt_005"],
+      "finding": "Q11 (what happens after I apply) scores 0 on four of five pages and 1 on one page. Universal gap across the institution — no program page explains the post-application process."
+    },
+    {
+      "type": "universal_gap",
+      "pages": ["gt_001", "gt_002", "gt_003", "gt_004", "gt_005"],
+      "finding": "Q1 (cost) scores 1 on all five pages. Every page links to cost information but none states a cost figure directly. Institutional-level pattern, not individual page failure."
+    },
+    {
+      "type": "cms_template_problem",
+      "pages": ["gt_005"],
+      "finding": "Certificate program uses degree program template resulting in blank Degree field. Finding routes to IT/CMS team not content team. Likely affects other certificate and specialist programs across the institution."
+    }
+  ]
+}
