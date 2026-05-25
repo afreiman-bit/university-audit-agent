@@ -1,0 +1,24 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Google Cloud credentials
+config/gcp_credentials.json
+config/ga4_credentials.json
+config/tenant_local.json
+
+# Build
+dist/
+build/
