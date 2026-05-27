@@ -18,6 +18,8 @@ class CrawlPayload(BaseModel):
     pdfs_detected: bool
     pdf_texts: list[str]
     http_status: int
+    llms_txt_present: bool
+    llms_txt_url: Optional[str]
     crawl_error: Optional[str] = None
 
 
@@ -63,6 +65,25 @@ def extract_pdf_text(pdf_url):
     return None
 
 
+async def check_llms_txt(base_url: str) -> tuple[bool, Optional[str]]:
+    """
+    Checks for llms.txt at the root domain.
+    Returns (present, url) tuple.
+    Treated as advisory only — no score impact per Google GEO guidance.
+    Present = positive signal. Absent = not flagged as problem.
+    """
+    parsed = urlparse(base_url)
+    root = f"{parsed.scheme}://{parsed.netloc}/llms.txt"
+    try:
+        async with httpx.AsyncClient(headers=HEADERS, timeout=5, follow_redirects=True) as client:
+            r = await client.get(root)
+            if r.status_code == 200 and len(r.text) > 10:
+                return True, root
+    except Exception:
+        pass
+    return False, None
+
+
 async def crawl_page(url: str) -> CrawlPayload:
     try:
         async with httpx.AsyncClient(headers=HEADERS, timeout=20, follow_redirects=True) as client:
@@ -74,6 +95,7 @@ async def crawl_page(url: str) -> CrawlPayload:
                 body_text="", body_word_count=0,
                 links_found=[], pdfs_detected=False, pdf_texts=[],
                 http_status=response.status_code,
+                llms_txt_present=False, llms_txt_url=None,
                 crawl_error=f"HTTP {response.status_code}",
             )
 
@@ -109,6 +131,8 @@ async def crawl_page(url: str) -> CrawlPayload:
             if text:
                 pdf_texts.append(text)
 
+        llms_txt_present, llms_txt_url = await check_llms_txt(url)
+
         return CrawlPayload(
             url=url,
             canonical_url=canonical_url,
@@ -119,6 +143,8 @@ async def crawl_page(url: str) -> CrawlPayload:
             pdfs_detected=len(pdf_urls) > 0,
             pdf_texts=pdf_texts,
             http_status=200,
+            llms_txt_present=llms_txt_present,
+            llms_txt_url=llms_txt_url,
         )
 
     except Exception as e:
@@ -127,5 +153,6 @@ async def crawl_page(url: str) -> CrawlPayload:
             body_text="", body_word_count=0,
             links_found=[], pdfs_detected=False, pdf_texts=[],
             http_status=0,
+            llms_txt_present=False, llms_txt_url=None,
             crawl_error=str(e),
         )
