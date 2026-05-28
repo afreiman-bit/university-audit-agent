@@ -5,7 +5,8 @@ from pydantic import BaseModel
 from google import genai
 from google.genai import types
 
-client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+# Uses Application Default Credentials — no API key needed
+client = genai.Client()
 
 
 class IntegrityResult(BaseModel):
@@ -88,7 +89,7 @@ async def check_finding(question_id, question_label, score, unclear_type, findin
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="models/gemini-2.0-flash",
             contents=prompt,
             config=types.GenerateContentConfig(temperature=0.1, max_output_tokens=512),
         )
@@ -128,7 +129,7 @@ async def cross_finding_check(url, all_findings):
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="models/gemini-2.0-flash",
             contents=prompt,
             config=types.GenerateContentConfig(temperature=0.1, max_output_tokens=1024),
         )

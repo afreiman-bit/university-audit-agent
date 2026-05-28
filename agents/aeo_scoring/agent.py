@@ -6,7 +6,8 @@ from google import genai
 from google.genai import types
 from config.aeo_rubric import AEO_QUESTIONS, AEO_CRITERIA, UNCLEAR_TYPES
 
-client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+# Uses Application Default Credentials — no API key needed
+client = genai.Client()
 
 
 class QuestionScore(BaseModel):
@@ -80,7 +81,7 @@ async def score_page(url, body_text, extracted_facts, question_ids=None):
 
         try:
             response = client.models.generate_content(
-                model="gemini-2.0-flash",
+                model="models/gemini-2.0-flash",
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     temperature=0.1,
